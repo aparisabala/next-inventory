@@ -13,22 +13,26 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Next Invetory",
+  title: "User Dashboard ",
   description: "This project manages retail/wholesale sells effectively",
 };
 
-export default function RootLayout({
+export default function AdminLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen`}
-      >
-      {children}
-      </body>
-    </html>
+    <div>
+      <section className="card p-2 w-full"> Compnay Name </section>
+      <section className="main  text-white">
+        <div className="flex">
+          <div className="w-2/12">A</div>
+          <div className="w-10/12">
+            {children}
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }
